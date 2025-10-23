@@ -1,0 +1,153 @@
+{% extends 'questions/base.html' %}
+{% load static %}
+{% block body %}
+
+    <h5> A sum of ₹5000 amounts to ₹6050 in 2 years at compound interest? Find the rate of interest.</h5>
+
+    <div class="container">
+        <!-- Arrow Column -->
+        <div class="arrow-col">
+            <div class="arrow arrow1">➜</div>
+            <div class="arrow arrow2">➜</div>
+            <div class="arrow arrow3">➜</div>
+            <div class="arrow arrow4">➜</div>
+            <div class="arrow arrow5">➜</div>
+        </div>
+
+        <!-- Left Column -->
+        <div class="left-col">
+            <div class="step">
+            <span class="numbox">5000</span>
+            <span>=</span>
+            <div class="bracket">
+                <span class="thirdBracket">[</span> 1 +
+                <span class="fraction">
+                <span class="top varbox R">r</span>
+                <span class="bottom">100</span>
+                </span> <span class="thirdBracket">]</span> <sup>2</sup>
+            </div>
+            <span>=</span>
+            <span class="numbox">6050</span>
+            </div>
+
+            <div style="position: relative; left:130px; display: flex;flex-direction: column ; row-gap: 10px;">
+            <div class="step">
+                <div class="bracket">  <span class="thirdBracket">[</span> 1 +
+                <span class="fraction">
+                    <span class="top varbox R">r</span>
+                    <span class="bottom">100</span>
+                </span> <span class="thirdBracket">]</span><sup>2</sup>
+                </div>
+                <span>=</span>
+                <span class="fraction">
+                <span class="top">6050</span>
+                <span class="bottom">5000</span>
+                </span>
+            </div>
+
+            <div class="step">
+                <div class="bracket">  <span class="thirdBracket">[</span> 1 +
+                <span class="fraction">
+                    <span class="top varbox R">r</span>
+                    <span class="bottom">100</span>
+                </span>  <span class="thirdBracket">]</span><sup>2</sup>
+                </div>
+                <span>=</span>
+                <span class="fraction">
+                <span class="top">121</span>
+                <span class="bottom">100</span>
+                </span>
+            </div>
+
+            <div class="dashed-container">
+                <div class="bracket"> <span class="thirdBracket">[</span> 1 +
+                <span class="fraction">
+                    <span class="top varbox R">r</span>
+                    <span class="bottom">100</span>
+                </span>  <span class="thirdBracket">]</span>
+                </div>
+
+                <span>=</span>
+                <span class="fraction">
+                <span class="top"><span class="numbox num6">11</span></span>
+                <span class="bottom"><span class="numbox num5">10</span></span>
+                </span>
+
+                <div class="dashed-line"></div>
+
+                <div class="step">
+                <span class="blackbox-inline">11<sup>2</sup> = 121<br>10<sup>2</sup> = 100</span>
+                </div>
+            </div>
+            </div>
+
+            <div class="step">
+            <span class="varbox R">r</span>
+            <span>=</span>
+            <span class="fraction">
+                <span class=" top"><span class="numbox num1">1</span></span>
+                <span class="bottom"><span class="numbox num5">10</span></span>
+            </span>
+            <span>× 100</span>
+            <span class="varbox R" style="margin-left: 80px;">r</span>
+            <span>=</span>
+            <span class="numbox">10%</span>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-col">
+            <div class="right-top-box">
+                <img src="{% static 'questions/imgs/interesticon.png' %}" alt="icon">
+                <div class="vertical-content">
+                    <span>Interest Compounded Annually</span>
+
+                    <!-- ARROW + BLACKBOX WRAPPER -->
+                    <div class="blackbox-container">
+                        <div class="long-arrow"></div>
+                        <div class="blackbox" style="color: #000;">
+                            <span class="numbox">5000</span>
+                            <span class="numbox num3">2</span>
+                            <span class="numbox">6050</span>
+                        </div>
+                    </div>
+
+                    <span style="text-align: center;">years</span>
+                </div>
+            </div>
+
+            <div class="blackbox" style="padding-left: 35px;">
+                Amount of the same sum in 1 years at<br>
+                the same rate of compound interest
+            </div>
+
+            <div style="position: relative;left: 126px; display: flex; flex-direction: column; row-gap: 20px;">
+                <div class="calc-line">
+                    <span>=</span>
+                    <span class="numbox">5000</span>
+                    <span class="bracket">  <span class="thirdBracket">[</span>1 +
+                    <span class="fraction">
+                        <span class="top">10</span>
+                        <span class="bottom">100</span>
+                    </span>  <span class="thirdBracket">]</span> <sup>1</sup>
+                    </span>
+                </div>
+
+                <div class="calc-line">
+                    <span>=</span>
+                    <span class="numbox">5000</span>
+                    <span>×</span>
+                    <span class="fraction">
+                    <span class="top">11</span>
+                    <span class="bottom">10</span>
+                    </span>
+                </div>
+
+                <div class="calc-line">
+                    <span>=</span>
+                    <span class="highlight">5500</span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
